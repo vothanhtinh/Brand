@@ -1,0 +1,28 @@
+.product {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+
+    .product__image {
+        width: 140px;
+        height: 140px;
+    }
+    h3 {
+        color: #1c1c1c;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    p {
+        margin-top: 5px;
+        color: #eb001b;
+        padding: 5px 10px;
+        background-color: #ffe3e3;
+        border-radius: 29px;
+        font-size: 14px;
+    }
+}
+.swiper-slide {
+    margin-right: 0px !important;
+}

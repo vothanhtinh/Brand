@@ -1,0 +1,99 @@
+.wrapper {
+    --default-layout-header-height: 86px;
+    --fontsize-text: 16px;
+    background: #fff;
+    height: var(--default-layout-header-height, 60px);
+    border-bottom: 1px solid rgb(0 0 0 / 15%);
+    width: 100%;
+}
+.wrapper-bottom {
+    border-bottom: 1px solid rgb(0 0 0 / 15%);
+    width: 100% !important;
+    background: #ffffff;
+}
+.inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    justify-content: space-around;
+    margin: 0 auto;
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    h2 {
+        color: #8cb7f5;
+    }
+}
+
+.search {
+    position: relative;
+    width: 600px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #0d6efd;
+    display: flex;
+    border-radius: 10px;
+
+    input {
+        flex: 1;
+        height: 100%;
+        font-size: var(--fontsize-text);
+        color: var(--black);
+        background-color: transparent;
+        &::placeholder {
+            color: #8b96a5;
+            padding-left: 10px;
+        }
+    }
+    .dropdown-header .btn {
+        width: 50px;
+        height: 50px !important;
+    }
+}
+
+.search-btn {
+    font-size: var(--fontsize-text);
+    width: 100px;
+    background: linear-gradient(180deg, #127fff 0%, #0067ff 100%);
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.group-icon {
+    display: flex;
+
+    .icon-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px 0 0;
+        color: #8b96a5;
+
+        .icon-item {
+            font-size: 20px;
+            padding-bottom: 5px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+        }
+        :last-child {
+            padding-right: 0;
+        }
+    }
+}
+.label {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+.la {
+    padding-right: 20px !important;
+}
