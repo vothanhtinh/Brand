@@ -7,6 +7,7 @@
 .sidebar-left {
     display: flex;
     flex-direction: column;
+    margin-right: -10px;
     p {
         color: #1c1c1c;
         padding: 5px 10px;
@@ -118,19 +119,82 @@
     border: 1px solid #e0e0e0;
     border-radius: 6px;
     .product__deal-count {
-        padding: 10px;
+        padding-top: 10px;
         display: flex;
         flex-direction: column;
+
+        .product__deal-count-header {
+            h2 {
+                color: #1c1c1c;
+                font-size: 20px;
+            }
+            p {
+                color: #8b96a5;
+            }
+        }
     }
     .product__deal-count-number {
         display: flex;
+        font-size: 12px;
+        text-align: center;
+
+        p {
+            margin-bottom: 2px;
+            color: #ffffff;
+            font-weight: 600;
+        }
         .days {
+            background: #606060;
+            margin-right: 6px;
+            width: 50px;
+            height: 50px;
+            padding: 3px;
+            border-radius: 4px;
+            .days__count {
+                font-size: 16px;
+            }
         }
         .hour {
+            background: #606060;
+            margin-right: 6px;
+            width: 50px;
+            height: 50px;
+            padding: 3px;
+            border-radius: 4px;
+
+            .hour__count {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
         }
         .min {
+            background: #606060;
+            margin-right: 6px;
+            width: 50px;
+            height: 50px;
+            padding: 3px;
+            border-radius: 4px;
+
+            .min__count {
+                font-size: 16px;
+            }
         }
         .sec {
+            background: #606060;
+            margin-right: 0;
+            width: 50px;
+            height: 50px;
+            padding: 3px;
+            border-radius: 4px;
+
+            .sec__count {
+                font-size: 16px;
+            }
         }
     }
+}
+
+.blockItemsGroup {
+    margin-top: 20px !important;
+    max-width: 100% !important;
 }

@@ -61,7 +61,7 @@ const ProductSales = () => {
         },
     };
     return (
-        <Swiper {...swiperOptions} style={{ marginLeft: '30px' }}>
+        <Swiper {...swiperOptions}>
             {productList.map((product) => (
                 <SwiperSlide key={product.id}>
                     <div className={cx('product')}>

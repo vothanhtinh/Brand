@@ -3,14 +3,18 @@ import classNames from 'classnames/bind';
 import styles from './home.module.scss';
 import banner from '~/assets/img/banner.png';
 import profile from '~/assets/img/profile.png';
+import homeDoor from '~/assets/img/homeDoor.png';
+import customer from '~/assets/img/customer.png';
 import ProductSales from './components/productSales';
+import BlockItemsGroup from './components/blockItemsGroup';
+import SectionInquiry from './components/sectionInquiry';
 const cx = classNames.bind(styles);
 
 function Home() {
     return (
         <>
             <Row className={cx('sidebar')}>
-                <Col xs="12" lg="2" className={cx('sidebar-left')}>
+                <Col xs="12" lg="3" className={cx('sidebar-left')}>
                     <p>Automobiles</p>
                     <p>Clothes and wear</p>
                     <p>Home interiors</p>
@@ -21,7 +25,7 @@ function Home() {
                     <p>Machinery tools</p>
                     <p>More category</p>
                 </Col>
-                <Col xs="12" lg="8">
+                <Col xs="12" lg="7">
                     <div className={cx('banner-img')}>
                         <img src={banner} alt="banner" />
                         <div className={cx('text-sub')}>
@@ -60,7 +64,7 @@ function Home() {
                 </Col>
             </Row>
             <Row className={cx('product__deal')}>
-                <Col xm={12} lg={2}>
+                <Col xm={12} lg={3}>
                     <div className={cx('product__deal-count')}>
                         <div className={cx('product__deal-count-header')}>
                             <h2>Deals and offers</h2>
@@ -68,27 +72,36 @@ function Home() {
                         </div>
                         <div className={cx('product__deal-count-number')}>
                             <div className={cx('days')}>
-                                <p>04</p>
+                                <p className={cx('days__count')}>04</p>
                                 <p>Days</p>
                             </div>
                             <div className={cx('hour')}>
-                                <p>13</p>
+                                <p className={cx('hour__count')}>13</p>
                                 <p>Hour</p>
                             </div>
                             <div className={cx('min')}>
-                                <p>3</p>
+                                <p className={cx('min__count')}>3</p>
                                 <p>Min</p>
                             </div>
                             <div className={cx('sec')}>
-                                <p>56</p>
+                                <p className={cx('sec__count')}>56</p>
                                 <p>Sec</p>
                             </div>
                         </div>
                     </div>
                 </Col>
-                <Col xm={12} lg={10} style={{ padding: '0px' }}>
+                <Col xm={12} lg={9} style={{ padding: '0px' }}>
                     <ProductSales />
                 </Col>
+            </Row>
+            <Row className={cx('blockItemsGroup')}>
+                <BlockItemsGroup title="Home and outdoor" image={homeDoor} />
+            </Row>
+            <Row className={cx('blockItemsGroup')}>
+                <BlockItemsGroup title="Consumer electronics and gadgets" image={customer} />
+            </Row>
+            <Row>
+                <SectionInquiry />
             </Row>
         </>
     );

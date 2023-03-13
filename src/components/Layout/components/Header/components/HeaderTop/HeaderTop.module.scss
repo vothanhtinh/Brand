@@ -93,6 +93,9 @@
 .label {
     padding-right: 15px !important;
     padding-left: 15px !important;
+    &:hover {
+        color: #000 !important;
+    }
 }
 .la {
     padding-right: 20px !important;

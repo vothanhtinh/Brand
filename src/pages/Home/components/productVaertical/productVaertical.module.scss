@@ -1,0 +1,26 @@
+.productVaertical {
+    width: 100%;
+    display: flex;
+    border: 1px solid #e0e0e0;
+    height: 127px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    .productVaertical__text {
+        h2 {
+            font-size: 15px;
+            color: #1c1c1c;
+        }
+        p {
+            font-size: 13px;
+            color: #8b96a5;
+            margin-top: 10px;
+        }
+    }
+    .productVaertical__image {
+    }
+    img {
+        width: 70px;
+        height: 70px;
+    }
+}
