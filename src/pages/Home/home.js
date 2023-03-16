@@ -8,6 +8,7 @@ import customer from '~/assets/img/customer.png';
 import ProductSales from './components/productSales';
 import BlockItemsGroup from './components/blockItemsGroup';
 import SectionInquiry from './components/sectionInquiry';
+import RecommentItems from './components/recommentItems';
 const cx = classNames.bind(styles);
 
 function Home() {
@@ -102,6 +103,9 @@ function Home() {
             </Row>
             <Row>
                 <SectionInquiry />
+            </Row>
+            <Row>
+                <RecommentItems />
             </Row>
         </>
     );

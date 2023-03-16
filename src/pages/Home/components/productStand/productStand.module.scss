@@ -1,0 +1,20 @@
+.product__stand {
+    background: #ffffff;
+    padding: 20px;
+    height: 310px;
+    border-radius: 6px;
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .product__stand-price {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .product__stand-description {
+        color: #8b96a5;
+        font-size: 16px;
+    }
+}

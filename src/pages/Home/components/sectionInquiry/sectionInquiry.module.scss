@@ -17,7 +17,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 10px;
+        padding: 10px 20px;
 
         .section__form-text {
             color: white;
@@ -38,6 +38,7 @@
             width: 491px;
             background: #fff;
             padding: 10px;
+            border-radius: 6px;
             h2 {
                 font-weight: 600;
                 margin-bottom: 20px;

@@ -1,0 +1,16 @@
+.block__items {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    .block__items-product {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .block__items-title {
+        font-size: 24px;
+        color: #1c1c1c;
+        font-weight: 600;
+    }
+}
