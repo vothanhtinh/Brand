@@ -9,6 +9,8 @@ import ProductSales from './components/productSales';
 import BlockItemsGroup from './components/blockItemsGroup';
 import SectionInquiry from './components/sectionInquiry';
 import RecommentItems from './components/recommentItems';
+import ExtraService from './components/extraService';
+import SupplierRegion from './components/supplierRegion';
 const cx = classNames.bind(styles);
 
 function Home() {
@@ -106,6 +108,12 @@ function Home() {
             </Row>
             <Row>
                 <RecommentItems />
+            </Row>
+            <Row>
+                <ExtraService />
+            </Row>
+            <Row>
+                <SupplierRegion />
             </Row>
         </>
     );

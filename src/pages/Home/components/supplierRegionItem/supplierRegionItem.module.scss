@@ -1,0 +1,19 @@
+.item {
+    display: flex;
+    width: 20%;
+    .item__image {
+        padding-top: 2px;
+    }
+    .item__text {
+        padding-left: 10px;
+        h3 {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 13px;
+            color: #8b96a5;
+            margin-bottom: 0;
+        }
+    }
+}

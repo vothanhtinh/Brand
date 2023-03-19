@@ -13,10 +13,10 @@
 }
 .inner {
     height: 100%;
+    padding-top: 10px;
     display: flex;
     align-items: center;
-    width: 1200px;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 auto;
     .logo img {
         width: 40px;

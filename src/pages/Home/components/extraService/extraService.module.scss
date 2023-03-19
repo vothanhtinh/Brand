@@ -1,0 +1,20 @@
+.block-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    .block-items__service {
+        flex-basis: 25%;
+        margin: 5px;
+        padding: 10px;
+    }
+}
+.title {
+    padding-left: 0;
+
+    h2 {
+        font-size: 24px;
+        color: #1c1c1c;
+        font-weight: 600;
+    }
+}
