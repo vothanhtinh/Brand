@@ -1,4 +1,3 @@
-import { Col } from 'react-bootstrap';
 import classNames from 'classnames/bind';
 import styles from './productStand.module.scss';
 

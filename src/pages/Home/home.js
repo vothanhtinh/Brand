@@ -11,6 +11,7 @@ import SectionInquiry from './components/sectionInquiry';
 import RecommentItems from './components/recommentItems';
 import ExtraService from './components/extraService';
 import SupplierRegion from './components/supplierRegion';
+import SubscribeItem from './components/subscribeItem';
 const cx = classNames.bind(styles);
 
 function Home() {
@@ -114,6 +115,9 @@ function Home() {
             </Row>
             <Row>
                 <SupplierRegion />
+            </Row>
+            <Row>
+                <SubscribeItem />
             </Row>
         </>
     );
