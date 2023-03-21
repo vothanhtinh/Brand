@@ -1,14 +1,15 @@
 import Home from '~/pages/Home/home';
-import Product from '~/pages/Product';
+import ProductDetail from '~/pages/productDetail';
 
 const publicRoutes = [
     {
         path: '/',
         component: Home,
     },
+
     {
-        path: '/product',
-        component: Product,
+        path: '/product/:productId',
+        component: ProductDetail,
     },
 ];
 

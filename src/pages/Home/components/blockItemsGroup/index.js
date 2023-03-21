@@ -10,9 +10,9 @@ const BlockItemsGroup = (props) => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         const res = async () => {
-            const data = await fetch('https://640e10deb07afc3b0dbe4740.mockapi.io/product/groupItem/product/');
+            const data = await fetch('https://dummyjson.com/products');
             const json = await data.json();
-            setProducts(json);
+            setProducts(json.products);
         };
         res();
     }, []);
@@ -30,7 +30,7 @@ const BlockItemsGroup = (props) => {
             </Col>
             <Col xm={12} lg={9} style={{ padding: '0px' }}>
                 <div className={cx('blockItemsGroup__right')}>
-                    {products.map((product) => (
+                    {products.slice(22, 30).map((product) => (
                         <ProductVaertical key={product.id} product={product} />
                     ))}
                 </div>

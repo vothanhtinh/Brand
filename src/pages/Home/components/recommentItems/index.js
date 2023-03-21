@@ -22,9 +22,9 @@ function RecommentItems() {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         const res = async () => {
-            const data = await fetch('https://640e10deb07afc3b0dbe4740.mockapi.io/product/groupItem/recommentItem/');
+            const data = await fetch('https://dummyjson.com/products');
             const json = await data.json();
-            setProducts(json);
+            setProducts(json.products);
         };
         res();
     }, []);
@@ -35,7 +35,7 @@ function RecommentItems() {
             <Row>
                 <Swiper {...swiperOptions}>
                     <div className={cx('block__items-product')}>
-                        {products.map((product) => (
+                        {products.slice(8, 16).map((product) => (
                             <SwiperSlide key={product.id}>
                                 <ProductStand key={product.id} product={product} />
                             </SwiperSlide>
@@ -46,7 +46,7 @@ function RecommentItems() {
             <Row>
                 <Swiper {...swiperOptions}>
                     <div className={cx('block__items-product')}>
-                        {products.map((product) => (
+                        {products.slice(16, 24).map((product) => (
                             <SwiperSlide key={product.id}>
                                 <ProductStand key={product.id} product={product} />
                             </SwiperSlide>

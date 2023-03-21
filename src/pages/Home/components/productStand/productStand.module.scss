@@ -16,5 +16,10 @@
     .product__stand-description {
         color: #8b96a5;
         font-size: 16px;
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }

@@ -1,53 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './productSales.module.scss';
 import classNames from 'classnames/bind';
-import image34 from '~/assets/img/image34.png';
-import image35 from '~/assets/img/image35.png';
-import image23 from '~/assets/img/image23.png';
-import image28 from '~/assets/img/image28.png';
-import image29 from '~/assets/img/image29.png';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
-
-const productList = [
-    {
-        id: 1,
-        name: 'Smart watches',
-        imageUrl: image35,
-        discount: 25,
-    },
-    {
-        id: 2,
-        name: 'Laptops',
-        imageUrl: image34,
-        discount: 15,
-    },
-    {
-        id: 3,
-        name: 'GoPro cameras',
-        imageUrl: image28,
-        discount: 40,
-    },
-    {
-        id: 4,
-        name: 'Headphones',
-        imageUrl: image29,
-        discount: 25,
-    },
-    {
-        id: 5,
-        name: 'Canon camreras',
-        imageUrl: image23,
-        discount: 25,
-    },
-    {
-        id: 6,
-        name: 'Canon camreras',
-        imageUrl: image23,
-        discount: 25,
-    },
-];
 
 const ProductSales = () => {
     const swiperOptions = {
@@ -60,16 +17,27 @@ const ProductSales = () => {
             // Thêm các breakpoint khác nếu cần thiết
         },
     };
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        const res = async () => {
+            const data = await fetch('https://dummyjson.com/products');
+            const json = await data.json();
+            setProducts(json.products);
+        };
+        res();
+    }, []);
     return (
         <Swiper {...swiperOptions}>
-            {productList.map((product) => (
+            {products.splice(0, 8).map((product) => (
                 <SwiperSlide key={product.id}>
                     <div className={cx('product')}>
                         <div className={cx('product__image')}>
-                            <img src={product.imageUrl} alt={product.name} />
+                            <img src={product.thumbnail} alt={product.title} />
                         </div>
-                        <h3>{product.name}</h3>
-                        <p>-{product.discount}%</p>
+                        <Link to={`/product/${product.id}`}>
+                            <h3>{product.title}</h3>
+                        </Link>
+                        <p>-{product.discountPercentage}%</p>
                     </div>
                 </SwiperSlide>
             ))}

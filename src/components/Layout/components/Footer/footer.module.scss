@@ -1,7 +1,7 @@
 .wrapper {
     background: #fff;
     width: 100%;
-
+    bottom: 68px;
     .inner {
         height: 100%;
         margin: 0 auto;
@@ -78,12 +78,14 @@
     }
 }
 .copyright {
+    bottom: 0;
     border-top: 1px solid #8b96a5;
     border-bottom: 1px solid #8b96a5;
     height: 68px;
     background-color: #eff2f4;
     display: flex;
     align-items: center;
+    width: 100%;
     .copyright__inner {
         display: flex;
         justify-content: space-between;
