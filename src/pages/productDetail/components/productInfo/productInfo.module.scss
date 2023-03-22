@@ -23,6 +23,10 @@
             background: #fff;
             width: 20%;
             margin: 20px 10px;
+            border-radius: 6px;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

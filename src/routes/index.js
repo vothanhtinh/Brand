@@ -1,3 +1,4 @@
+import Cart from '~/pages/cart';
 import Home from '~/pages/Home/home';
 import ProductDetail from '~/pages/productDetail';
 
@@ -10,6 +11,10 @@ const publicRoutes = [
     {
         path: '/product/:productId',
         component: ProductDetail,
+    },
+    {
+        path: '/cart',
+        component: Cart,
     },
 ];
 

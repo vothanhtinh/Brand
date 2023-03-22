@@ -1,0 +1,150 @@
+.block__cart {
+    margin-bottom: 20px;
+    .block__cart-item {
+        background: #ffffff;
+        padding: 10px 20px;
+        border: 1px solid #dee2e7;
+        border-radius: 6px;
+
+        .button__navigation {
+            display: flex;
+            justify-content: space-between;
+            button {
+                font-size: 13px;
+                padding: 7px 10px;
+            }
+            .button__navigation-back {
+                button {
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .button__navigation-remove {
+                button {
+                    color: #0d6efd;
+                    background: #ffffff;
+                    border: 1px solid #dee2e7;
+                }
+            }
+        }
+    }
+    .supply__policy {
+        margin-top: 29px;
+        .supply__policy-items {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 20px;
+            .supply__policy-item {
+                display: flex;
+                .icon {
+                    width: 48px;
+                    height: 48px;
+                    background: #dee2e7;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg {
+                        width: 16px;
+                        height: 21px;
+                    }
+                }
+                .text {
+                    padding-left: 10px;
+                    font-size: 16px;
+                    h4 {
+                        color: #1c1c1c;
+                    }
+                    p {
+                        color: #a9acb0;
+                    }
+                }
+            }
+        }
+    }
+    .block__coupons {
+        background: #ffffff;
+        height: 110px;
+        padding: 10px 20px;
+        border: 1px solid #dee2e7;
+        border-radius: 6px;
+        h3 {
+            padding-bottom: 10px;
+        }
+    }
+    .block__pay {
+        margin-top: 20px;
+        padding: 20px 20px;
+        background: #ffffff;
+        border: 1px solid #dee2e7;
+        border-radius: 6px;
+        .block__pay-caculator {
+            font-size: 16px;
+            .subtotal {
+                display: flex;
+                justify-content: space-between;
+                color: #505050;
+                padding-bottom: 5px;
+            }
+            .discount {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 5px;
+                .key {
+                    color: #505050;
+                }
+                .value {
+                    color: #fa3434;
+                }
+            }
+            .tax {
+                display: flex;
+                justify-content: space-between;
+                .key {
+                    color: #505050;
+                }
+                .value {
+                    color: #00b517;
+                }
+            }
+        }
+        .block__pay-total {
+            display: flex;
+            justify-content: space-between;
+            color: #1c1c1c;
+            font-weight: 600;
+            padding-bottom: 20px;
+            .key {
+                font-size: 19px;
+            }
+            .value {
+                font-size: 20px;
+            }
+        }
+        .block__pay-checkout {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                background: #00b517;
+                padding: 16px 82px;
+                border: none;
+                font-size: 13px;
+            }
+        }
+        .block__pay-credit {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            div {
+                width: 20%;
+                margin: 5px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

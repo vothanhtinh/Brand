@@ -11,7 +11,7 @@ function ServiceItems({ info }) {
         <>
             <div className={cx('service-card')}>
                 <div className={cx('service-card__image')}>
-                    <img src={info.image} alt="Service Image" />
+                    <img src={info.image} alt="ServiceImage" />
                 </div>
                 <p>
                     <FontAwesomeIcon icon={info.icon} />
