@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faMessage, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { Container, Form } from 'react-bootstrap';
 import logo from '~/assets/img/logo.png';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -12,10 +13,12 @@ function HeaderTop() {
         <header className={cx('wrapper')}>
             <Container>
                 <div className={cx('inner')}>
-                    <div className={cx('logo')}>
-                        <img src={logo} alt="logo" />
-                        <h2 className={cx('text-logo')}>Brand</h2>
-                    </div>
+                    <Link to="/">
+                        <div className={cx('logo')}>
+                            <img src={logo} alt="logo" />
+                            <h2 className={cx('text-logo')}>Brand</h2>
+                        </div>
+                    </Link>
                     <div className={cx('search')}>
                         <input placeholder="Search" spellCheck={false} />
                         <Form.Select

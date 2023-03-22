@@ -32,7 +32,7 @@ function ProductDetail() {
                 </div>
             </Row>
             <Row>
-                <RelatedProduct />
+                <RelatedProduct category={product.category} />
             </Row>
         </>
     );
