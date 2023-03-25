@@ -7,10 +7,16 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartBar, faBasketShopping, faShieldHalved, faGlobe, faHeart } from '@fortawesome/free-solid-svg-icons';
 import US from '~/assets/img/US.png';
-
+import { addToCart } from '~/actions/actiontype';
+import { useDispatch } from 'react-redux';
 const cx = classNames.bind(styles);
+
 function ProductInfo({ product }) {
     const imgRef = useRef(null);
+    const dispatch = useDispatch();
+    const handleAddToCart = () => {
+        dispatch(addToCart(product));
+    };
 
     return (
         <>
@@ -121,7 +127,7 @@ function ProductInfo({ product }) {
                         </div>
                         <div className={cx('supplier__button')}>
                             <div className={cx('supplier__button-inquiry')}>
-                                <Button> Send inquiry</Button>
+                                <Button onClick={() => handleAddToCart()}> Send inquiry</Button>
                             </div>
                             <div className={cx('supplier__button-profile')}>
                                 <Button> Seller's profile</Button>
@@ -139,4 +145,5 @@ function ProductInfo({ product }) {
         </>
     );
 }
+
 export default ProductInfo;

@@ -6,11 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import GlobalStyles from '~/components/GlobalStyles';
 import 'swiper/swiper-bundle.css';
 
+import { Provider } from 'react-redux';
+import Store from './store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-    <GlobalStyles>
-        <App />
-    </GlobalStyles>,
+    <Provider store={Store}>
+        <GlobalStyles>
+            <App />
+        </GlobalStyles>
+    </Provider>,
 );
 
 // If you want to start measuring performance in your app, pass a function

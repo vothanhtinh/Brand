@@ -45,7 +45,9 @@ function HeaderTop() {
                         </div>
                         <div className={cx('icon-items')}>
                             <FontAwesomeIcon className={cx('icon-item')} icon={faCartShopping} />
-                            <p>My Carts</p>
+                            <Link to="/cart">
+                                <p>My Carts</p>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -9,10 +9,32 @@ import pay2 from '~/assets/img/pay2.png';
 import pay3 from '~/assets/img/pay3.png';
 import pay4 from '~/assets/img/pay4.png';
 import pay5 from '~/assets/img/pay5.png';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeAllCart } from '~/actions/actiontype';
 
 const cx = classNames.bind(styles);
 
 function Cart() {
+    const navigate = useNavigate();
+
+    const dispatch = useDispatch();
+
+    const handleRemoveAll = () => {
+        dispatch(removeAllCart());
+    };
+
+    const { cartItems } = useSelector((state) => state.cart);
+    const calculateTotalPrice = () => {
+        let total = 0;
+        if (cartItems) {
+            cartItems.forEach((item) => {
+                total += item.totalPrice;
+            });
+            return total;
+        }
+    };
+
     return (
         <>
             <div className={cx('block__cart')}>
@@ -20,17 +42,16 @@ function Cart() {
                     <Col md={9} style={{ padding: '0px' }}>
                         <div className={cx('block__cart-item')}>
                             <CartItem />
-                            <CartItem />
 
                             <div className={cx('button__navigation')}>
                                 <div className={cx('button__navigation-back')}>
-                                    <Button>
+                                    <Button onClick={() => navigate('/')}>
                                         <FontAwesomeIcon icon={faArrowLeft} />
                                         <span>Back to Home</span>
                                     </Button>
                                 </div>
                                 <div className={cx('button__navigation-remove')}>
-                                    <Button>Remove All</Button>
+                                    <Button onClick={handleRemoveAll}>Remove All</Button>
                                 </div>
                             </div>
                         </div>
@@ -93,21 +114,21 @@ function Cart() {
                             <div className={cx('block__pay-caculator')}>
                                 <div className={cx('subtotal')}>
                                     <div className={cx('key')}>Subtotal:</div>
-                                    <div className={cx('value')}>$1403.97</div>
+                                    <div className={cx('value')}>${calculateTotalPrice()}</div>
                                 </div>
                                 <div className={cx('discount')}>
                                     <div className={cx('key')}>Discount:</div>
-                                    <div className={cx('value')}>- $60.00</div>
+                                    <div className={cx('value')}>- $0</div>
                                 </div>
                                 <div className={cx('tax')}>
                                     <div className={cx('key')}>Tax:</div>
-                                    <div className={cx('value')}>+ $14.00</div>
+                                    <div className={cx('value')}>+ $0</div>
                                 </div>
                                 <hr />
                             </div>
                             <div className={cx('block__pay-total')}>
                                 <div className={cx('key')}>Total:</div>
-                                <div className={cx('value')}>$1357.97</div>
+                                <div className={cx('value')}>${calculateTotalPrice()}</div>
                             </div>
                             <div className={cx('block__pay-checkout')}>
                                 <Button>Check Out</Button>
@@ -136,4 +157,5 @@ function Cart() {
         </>
     );
 }
+
 export default Cart;

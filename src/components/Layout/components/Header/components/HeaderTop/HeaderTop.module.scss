@@ -75,7 +75,9 @@
         align-items: center;
         padding: 10px 15px 0 0;
         color: #8b96a5;
-
+        a {
+            color: #8b96a5;
+        }
         .icon-item {
             font-size: 20px;
             padding-bottom: 5px;
@@ -85,6 +87,7 @@
             font-size: 12px;
             line-height: 15px;
         }
+
         :last-child {
             padding-right: 0;
         }

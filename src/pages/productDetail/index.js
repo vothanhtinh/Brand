@@ -5,7 +5,6 @@ import styles from './productDetail.module.scss';
 import ProductInfo from './components/productInfo';
 import { Row } from 'react-bootstrap';
 import RelatedProduct from './components/relatedProduct';
-
 const cx = classNames.bind(styles);
 
 function ProductDetail() {
@@ -19,9 +18,11 @@ function ProductDetail() {
         };
         loadData();
     }, [productId]);
+
     if (product === null) {
         return <p>Loading...!</p>;
     }
+
     return (
         <>
             <Row>
