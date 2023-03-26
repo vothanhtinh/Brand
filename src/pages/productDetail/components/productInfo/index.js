@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import TextRating from '../textRating';
 import styles from './productInfo.module.scss';
@@ -9,15 +9,28 @@ import { faChartBar, faBasketShopping, faShieldHalved, faGlobe, faHeart } from '
 import US from '~/assets/img/US.png';
 import { addToCart } from '~/actions/actiontype';
 import { useDispatch } from 'react-redux';
+import ToastMessage from '../toastMessage';
+
 const cx = classNames.bind(styles);
 
 function ProductInfo({ product }) {
     const imgRef = useRef(null);
+
     const dispatch = useDispatch();
+    //Thong Bao
+    const [showToast, setShowToast] = useState(false);
+    const [toastMessage, setToastMessage] = useState('');
     const handleAddToCart = () => {
         dispatch(addToCart(product));
     };
-
+    const addSuccess = () => {
+        setToastMessage('Sản phẩm đã được thêm vào giỏ hàng thành công!');
+        setShowToast(true);
+    };
+    const handleButtonClick = () => {
+        handleAddToCart();
+        addSuccess();
+    };
     return (
         <>
             <Row style={{ border: '1px solid #DEE2E7', background: '#ffffff', borderRadius: '6px' }}>
@@ -127,12 +140,13 @@ function ProductInfo({ product }) {
                         </div>
                         <div className={cx('supplier__button')}>
                             <div className={cx('supplier__button-inquiry')}>
-                                <Button onClick={() => handleAddToCart()}> Send inquiry</Button>
+                                <Button onClick={() => handleButtonClick()}> Send inquiry</Button>
                             </div>
                             <div className={cx('supplier__button-profile')}>
                                 <Button> Seller's profile</Button>
                             </div>
                         </div>
+                        <ToastMessage showToast={showToast} setShowToast={setShowToast} toastMessage={toastMessage} />
                     </div>
                     <div className={cx('save__later')}>
                         <Button>

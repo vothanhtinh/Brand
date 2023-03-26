@@ -57,7 +57,6 @@ const CartReducer = (state = initialState, action) => {
             };
         case REDUCE_CART:
             let reduce = state.cartItems;
-
             return {
                 cartItems: reduce.map((item) => {
                     if (item.id === action.payload.id) {

@@ -20,7 +20,9 @@ const ProductVaertical = ({ product }) => {
                         </p>
                     </div>
                     <div className={cx('productVaertical__image')}>
-                        <img src={product.thumbnail} alt={product.title} />
+                        <Link to={`/product/${product.id}`}>
+                            <img src={product.thumbnail} alt={product.title} />
+                        </Link>
                     </div>
                 </div>
             </Col>

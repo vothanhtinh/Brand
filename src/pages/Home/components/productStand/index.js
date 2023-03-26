@@ -17,8 +17,11 @@ function ProductStand({ product }) {
                 <div className={cx('product__stand-price')}>
                     <h4> ${product.price}</h4>
                 </div>
+
                 <div className={cx('product__stand-description')}>
-                    <p>{product.description}</p>
+                    <Link to={`/product/${product.id}`}>
+                        <p>{product.description}</p>
+                    </Link>
                 </div>
             </div>
         </>

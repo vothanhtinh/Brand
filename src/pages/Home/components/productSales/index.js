@@ -31,12 +31,13 @@ const ProductSales = () => {
             {products.splice(0, 8).map((product) => (
                 <SwiperSlide key={product.id}>
                     <div className={cx('product')}>
-                        <div className={cx('product__image')}>
-                            <img src={product.thumbnail} alt={product.title} />
-                        </div>
                         <Link to={`/product/${product.id}`}>
+                            <div className={cx('product__image')}>
+                                <img src={product.thumbnail} alt={product.title} />
+                            </div>
                             <h3>{product.title}</h3>
                         </Link>
+
                         <p>-{product.discountPercentage}%</p>
                     </div>
                 </SwiperSlide>
