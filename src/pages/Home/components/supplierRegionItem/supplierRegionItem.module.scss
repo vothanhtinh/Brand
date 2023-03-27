@@ -3,6 +3,10 @@
     width: 20%;
     .item__image {
         padding-top: 2px;
+        img {
+            width: 28px;
+            height: 20px;
+        }
     }
     .item__text {
         padding-left: 10px;
@@ -14,6 +18,19 @@
             font-size: 13px;
             color: #8b96a5;
             margin-bottom: 0;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .item {
+        margin-right: 30px;
+        width: 30%;
+
+        .item__text {
+            width: 100px;
+            h3 {
+                white-space: nowrap;
+            }
         }
     }
 }

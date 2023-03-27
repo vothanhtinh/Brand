@@ -111,3 +111,18 @@
         }
     }
 }
+@media (max-width: 576px) {
+    .wrapper {
+        .inner {
+            .rowItems__left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .rowItems__right {
+                display: none;
+            }
+        }
+    }
+}

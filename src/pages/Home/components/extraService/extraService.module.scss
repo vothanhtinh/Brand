@@ -18,3 +18,22 @@
         font-weight: 600;
     }
 }
+
+@media (max-width: 576px) {
+    .block-items {
+        padding: 0 !important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto !important;
+        -ms-overflow-style: none; /* IE và Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .block-items::-webkit-scrollbar {
+        display: none; /* Chrome, Safari và Opera */
+    }
+    .title {
+        h2 {
+            font-size: 18px;
+        }
+    }
+}

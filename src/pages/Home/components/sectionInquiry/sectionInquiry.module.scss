@@ -33,6 +33,9 @@
                 font-size: 16px;
                 line-height: 24px;
             }
+            button {
+                display: none;
+            }
         }
         .section__form-form {
             width: 491px;
@@ -57,6 +60,27 @@
                 font-size: 16px;
                 text-align: center;
             }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .section__form {
+        .section__form-content {
+            .section__form-text {
+                h2 {
+                    font-size: 16px;
+                    text-align: left;
+                }
+                p {
+                    display: none;
+                }
+                button {
+                    display: block;
+                }
+            }
+        }
+        .section__form-form {
+            display: none;
         }
     }
 }

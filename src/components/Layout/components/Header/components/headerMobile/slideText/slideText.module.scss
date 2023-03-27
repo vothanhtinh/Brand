@@ -1,0 +1,21 @@
+.slide__text {
+    display: flex;
+    overflow-x: auto;
+    -ms-overflow-style: none; /* IE và Edge */
+    scrollbar-width: none; /* Firefox */
+    padding-left: 10px;
+    padding-top: 20px;
+    white-space: nowrap;
+    .content {
+        h3 {
+            color: #0d6efd;
+            background: #eff2f4;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        padding-right: 20px;
+    }
+}
+.slide__text::-webkit-scrollbar {
+    display: none; /* Chrome, Safari và Opera */
+}

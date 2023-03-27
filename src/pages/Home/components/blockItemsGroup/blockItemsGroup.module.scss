@@ -39,3 +39,52 @@
     padding-right: 0px !important;
     width: 100%;
 }
+.button__source {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .blockItems__left {
+        background-color: #fff;
+
+        img {
+            display: none;
+        }
+        .blockItems__left-text {
+            position: relative;
+            white-space: nowrap;
+            padding: 0;
+            padding: 10px;
+            h3 {
+                margin-bottom: 0;
+            }
+            button {
+                display: none;
+            }
+        }
+    }
+    .blockItemsGroup__right {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -ms-overflow-style: none; /* IE và Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .blockItemsGroup__right::-webkit-scrollbar {
+        display: none; /* Chrome, Safari và Opera */
+    }
+    .button__source {
+        display: block;
+        width: 100%;
+        padding: 0 !important;
+
+        button {
+            color: #0d6efd;
+            background: #ffffff;
+            width: 100%;
+            text-align: left;
+            height: 40px;
+            font-size: 16px;
+            border: 1px solid #dee2e7;
+        }
+    }
+}

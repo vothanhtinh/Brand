@@ -14,3 +14,10 @@
         font-weight: 600;
     }
 }
+@media (max-width: 576px) {
+    .block__items {
+        .block__items-title {
+            font-size: 16px;
+        }
+    }
+}

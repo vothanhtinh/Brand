@@ -1,11 +1,24 @@
 .supplierItem {
     display: flex;
     margin-top: 10px !important;
-    overflow: hidden;
 }
 .title {
     margin-bottom: 10px;
     font-size: 24px;
     color: #1c1c1c;
     font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .supplierItem {
+        overflow-x: auto !important;
+        -ms-overflow-style: none; /* IE và Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .supplierItem::-webkit-scrollbar {
+        display: none; /* Chrome, Safari và Opera */
+    }
+    .title {
+        font-size: 18px;
+    }
 }

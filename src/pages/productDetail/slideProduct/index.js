@@ -14,6 +14,21 @@ function SlideProduct({ enpoint }) {
             clickable: true,
         },
         breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            390: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            600: {
+                spaceBetween: 10,
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 5,
+            },
             // Thêm các breakpoint khác nếu cần thiết
         },
     };

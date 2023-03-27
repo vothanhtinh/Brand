@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const ProductVaertical = ({ product }) => {
     return (
         <>
-            <Col lg={3} style={{ padding: '0px' }}>
+            <Col lg={3} xs={6} style={{ padding: '0px' }}>
                 <div className={cx('productVaertical')}>
                     <div className={cx('productVaertical__text')}>
                         <h2>

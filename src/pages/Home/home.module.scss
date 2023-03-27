@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     margin-right: -10px;
+
     p {
         color: #1c1c1c;
         padding: 5px 10px;
@@ -197,4 +198,32 @@
 .blockItemsGroup {
     margin-top: 20px !important;
     max-width: 100% !important;
+}
+@media (max-width: 576px) {
+    .sidebar {
+        padding: 0;
+        .sidebar-left {
+            display: none;
+        }
+        .banner-img {
+            padding: 0;
+        }
+        .user-info {
+            display: none;
+        }
+        .block-aqua {
+            display: none;
+        }
+        .block-orange {
+            display: none;
+        }
+    }
+
+    .product__deal {
+        .product__deal-count {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 }

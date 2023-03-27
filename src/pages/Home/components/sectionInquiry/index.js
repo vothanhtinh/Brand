@@ -20,6 +20,9 @@ function SectionInquiry() {
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
                         </p>
+                        <Button variant="primary" type="button">
+                            Send inquiry
+                        </Button>
                     </div>
                     <div className={cx('section__form-form')}>
                         <h2>Send quote to suppliers</h2>

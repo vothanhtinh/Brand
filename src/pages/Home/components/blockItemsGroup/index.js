@@ -1,3 +1,5 @@
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import { Button, Col } from 'react-bootstrap';
@@ -35,6 +37,12 @@ const BlockItemsGroup = (props) => {
                     ))}
                 </div>
             </Col>
+
+            <div className={cx('button__source')}>
+                <Button>
+                    Source Now <FontAwesomeIcon icon={faArrowRight} />
+                </Button>
+            </div>
         </>
     );
 };
