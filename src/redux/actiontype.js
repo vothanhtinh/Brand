@@ -22,3 +22,4 @@ export const reduceCart = (product) => ({
 export const removeAllCart = () => ({
     type: REMOVE_ALL_CART,
 });
+//////////////////AUTH//////////

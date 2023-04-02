@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, INCREASE_CART, REDUCE_CART, REMOVE_ALL_CART } from '~/actions/type';
+import { ADD_TO_CART, REMOVE_FROM_CART, INCREASE_CART, REDUCE_CART, REMOVE_ALL_CART } from '~/redux/type';
 const initialState = {
     cartItems: [],
     totalPrice: 0,

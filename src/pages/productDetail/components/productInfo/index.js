@@ -7,7 +7,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartBar, faBasketShopping, faShieldHalved, faGlobe, faHeart } from '@fortawesome/free-solid-svg-icons';
 import US from '~/assets/img/US.png';
-import { addToCart } from '~/actions/actiontype';
+import { addToCart } from '~/redux/actiontype';
 import { useDispatch } from 'react-redux';
 import ToastMessage from '../toastMessage';
 

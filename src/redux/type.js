@@ -4,3 +4,7 @@ export const REMOVE_ALL_CART = 'REMOVE_ALL_CART';
 
 export const INCREASE_CART = 'INCREASE_CART';
 export const REDUCE_CART = 'REDUCE_CART';
+
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';

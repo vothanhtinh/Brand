@@ -27,7 +27,8 @@ function SlideProduct({ enpoint }) {
                 slidesPerView: 3,
             },
             768: {
-                slidesPerView: 5,
+                slidesPerView: 4,
+                spaceBetween: 10,
             },
             // Thêm các breakpoint khác nếu cần thiết
         },

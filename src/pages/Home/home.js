@@ -12,9 +12,21 @@ import RecommentItems from './components/recommentItems';
 import ExtraService from './components/extraService';
 import SupplierRegion from './components/supplierRegion';
 import SubscribeItem from './components/subscribeItem';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { logoutUser } from '~/redux/authRequest';
 const cx = classNames.bind(styles);
 
 function Home() {
+    const user = useSelector((state) => state.auth.login?.currentUser);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const accessToken = user?.accessToken;
+    const id = user?._id;
+    const handleLogout = (e) => {
+        e.preventDefault();
+        logoutUser(dispatch, id, navigate, accessToken);
+    };
     return (
         <>
             <Row className={cx('sidebar')}>
@@ -44,12 +56,33 @@ function Home() {
                         <div className={cx('user-info')}>
                             <div className={cx('user-info__top')}>
                                 <img src={profile} alt="logo-user" />
-                                <h3>
-                                    Hi, user <br /> let's get stated
-                                </h3>
+                                {user ? (
+                                    <h3>
+                                        Hi, user {user.username} <br /> let's get stated
+                                    </h3>
+                                ) : (
+                                    <h3>
+                                        Hi, user! <br /> let's get stated
+                                    </h3>
+                                )}
                             </div>
-                            <Button className={cx('join-now')}>Join-now</Button>
-                            <Button className={cx('login')}>Login</Button>
+                            {user ? (
+                                <>
+                                    <Button className={cx('join-now')}>Join-now</Button>
+                                    <Link to="/logout">
+                                        <Button className={cx('login')} onClick={handleLogout}>
+                                            Logout
+                                        </Button>
+                                    </Link>
+                                </>
+                            ) : (
+                                <>
+                                    <Button className={cx('join-now')}>Join-now</Button>
+                                    <Link to="/login">
+                                        <Button className={cx('login')}>Login</Button>
+                                    </Link>
+                                </>
+                            )}
                         </div>
                         <div className={cx('block-orange')}>
                             <h2>

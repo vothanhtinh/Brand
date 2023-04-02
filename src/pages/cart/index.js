@@ -11,7 +11,7 @@ import pay4 from '~/assets/img/pay4.png';
 import pay5 from '~/assets/img/pay5.png';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeAllCart } from '~/actions/actiontype';
+import { removeAllCart } from '~/redux/actiontype';
 
 const cx = classNames.bind(styles);
 

@@ -3,7 +3,7 @@ import { Button, Col, Row } from 'react-bootstrap';
 import styles from './cartItem.module.scss';
 import { useSelector } from 'react-redux';
 
-import { removeFromCart, increaseCart, reduceCart } from '~/actions/actiontype';
+import { removeFromCart, increaseCart, reduceCart } from '~/redux/actiontype';
 import { useDispatch } from 'react-redux';
 
 const cx = classNames.bind(styles);
