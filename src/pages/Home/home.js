@@ -19,6 +19,7 @@ const cx = classNames.bind(styles);
 
 function Home() {
     const user = useSelector((state) => state.auth.login?.currentUser);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const accessToken = user?.accessToken;

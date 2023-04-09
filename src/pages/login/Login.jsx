@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '~/redux/authRequest';
@@ -28,7 +28,6 @@ const Login = () => {
         };
         loginUser(newUser, dispatch, navigate);
     };
-
     return (
         <Container>
             <section className={cx('login-container')}>

@@ -32,6 +32,7 @@ const authSlide = createSlice({
         loginFailed: (state, action) => {
             state.login.isFetching = false;
             state.login.error = true;
+            console.log(action.payload);
             state.login.msg = action.payload.response.data;
         },
         registerStart: (state) => {

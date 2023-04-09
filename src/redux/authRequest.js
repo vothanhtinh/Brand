@@ -17,6 +17,7 @@ export const loginUser = async (user, dispatch, navigate) => {
     dispatch(loginStart());
     try {
         const res = await axiosConfig.post('/v1/auth/login', user);
+        console.log(res);
         dispatch(loginSuccess(res.data));
         localStorage.setItem(localStorageKey.USER, JSON.stringify(res.data));
         navigate('/');
@@ -42,6 +43,7 @@ export const logoutUser = async (dispatch, id, navigate, accessToken) => {
         const res = await axiosConfig.post('/v1/auth/logout', id, {
             headers: { token: `Bearer ${accessToken}` },
         });
+        localStorage.clear();
         dispatch(logoutSuccess(res.data));
         navigate('/');
     } catch (err) {

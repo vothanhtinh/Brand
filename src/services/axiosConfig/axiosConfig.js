@@ -20,4 +20,19 @@ axiosConfig.interceptors.request.use(
     (error) => Promise.reject(error),
 );
 
+// axiosConfig.interceptors.response.use(
+//     function (response) {
+//         // Any status code that lie within the range of 2xx cause this function to trigger
+//         // Do something with response data
+//         return response.data;
+//     },
+//     async function (error) {
+//         if (error.response.status === 403) {
+//             const access_token = await axiosConfig.post('/refresh');
+//             axios.defaults.headers.common['Authorization'] = 'Bearer ' + access_token;
+//             localStorage.setItem('access_token', access_token);
+//             return Promise.reject(error);
+//         }
+//     },
+// );
 export default axiosConfig;
